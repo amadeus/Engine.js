@@ -13,6 +13,8 @@ function(
 	performance
 ){ 'use strict';
 
+var undef;
+
 var Engine = function(settings){
 	Util.merge(this, settings);
 
@@ -118,12 +120,22 @@ Engine.prototype = {
 		_now  = performance.now() / 1000;
 		tick = Math.min(_now - this.last, 0.02);
 
-		this.context.clearRect(
-			0,
-			0,
-			this.width  * scale,
-			this.height * scale
-		);
+		if (this.mode === '2d' && this.clearColor) {
+			this.context.fillStyle = this.clearColor;
+			this.context.fillRect(
+				0,
+				0,
+				this.width  * scale,
+				this.height * scale
+			);
+		} else if (this.mode === '2d' && this.clearColor === undef) {
+			this.context.clearRect(
+				0,
+				0,
+				this.width  * scale,
+				this.height * scale
+			);
+		}
 
 		for (i = 0; i < preRun.length; i++) {
 			preRun[i](tick, items, this);
