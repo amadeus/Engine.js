@@ -3,14 +3,14 @@ define([
 	'lib/Util',
 
 	'polyfill/requestAnimationFrame',
-	'polyfill/Date.now',
+	'polyfill/performance',
 	'polyfill/Function.prototype.bind'
 ],
 function(
 	Vector,
 	Util,
 	requestAnimationFrame,
-	now
+	performance
 ){ 'use strict';
 
 var Engine = function(settings){
@@ -58,7 +58,7 @@ Engine.prototype = {
 	},
 
 	start: function(){
-		this.last = now() / 1000;
+		this.last = performance.now() / 1000;
 		requestAnimationFrame(this.run);
 		return this;
 	},
@@ -115,8 +115,8 @@ Engine.prototype = {
 		scale    = this.scale;
 		context  = this.context;
 
-		_now  = now() / 1000;
-		tick = Math.min(_now - this.last, 16.666666666666668);
+		_now  = performance.now() / 1000;
+		tick = Math.min(_now - this.last, 0.02);
 
 		this.context.clearRect(
 			0,
