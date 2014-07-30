@@ -45,8 +45,10 @@ Engine.prototype = {
 		document.body.appendChild(this.canvas);
 		this.context = this.canvas.getContext(this.mode);
 
-		this._handleResize = this._handleResize.bind(this);
-		window.addEventListener('resize', this._handleResize, false);
+		if (this.fullscreen) {
+			this._handleResize = this._handleResize.bind(this);
+			window.addEventListener('resize', this._handleResize, false);
+		}
 		this._handleResize();
 
 		document.body.style.backgroundColor = this.background;
