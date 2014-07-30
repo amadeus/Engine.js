@@ -35,7 +35,7 @@ var App = {
 
 		// Every frame add one item until we hit 1000
 		this.engine.onRun = function(tick, items, engine){
-			if (items.length < 1000) {
+			if (items.length < 600) {
 				engine.addItem(new Item({
 					color: 'rgba(' +
 						Util.randomInt(0,256) + ',' +
