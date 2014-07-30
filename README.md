@@ -188,8 +188,9 @@ create a WebGL context, leave this as it is.
 ### `Engine.scale`
 
 This is generally a property you should let Engine handle.  It will change
-based on the `window.devicePixelRatio` specified by the browser.   It get set
-automatically and enables you to gracefully support retina resolution visuals.
+based on the `window.devicePixelRatio` specified by the browser.   It will get
+set automatically and enables you to gracefully support retina resolution
+visuals.
 
 
 ## js/Item.js
