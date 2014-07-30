@@ -52,7 +52,7 @@ setup method as well.
 ### `App.start`
 
 This method starts the engine.  There should rarely be any reason to modify
-this method.  Both `.setup` and `.start` get executed at the of App.js.
+this method.  Both `.setup` and `.start` get executed at the end of App.js.
 
 
 ## js/Engine.js
