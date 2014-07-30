@@ -58,7 +58,7 @@ Engine.prototype = {
 
 	setupMouse: function(){
 		this.mouse = Vector.coerce(this.mouse);
-		window.addEventListener('mousemove', this._handleMouseMove.bind(this), false);
+		this.canvas.addEventListener('mousemove', this._handleMouseMove.bind(this), false);
 	},
 
 	start: function(){
@@ -178,8 +178,8 @@ Engine.prototype = {
 	},
 
 	_handleMouseMove: function(event){
-		this.mouse.x = event.pageX;
-		this.mouse.y = event.pageY;
+		this.mouse.x = event.layerX;
+		this.mouse.y = event.layerY;
 	}
 
 };
