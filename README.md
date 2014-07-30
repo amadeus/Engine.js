@@ -106,6 +106,13 @@ bypass any clearing of the frame meaning every frame will be drawn on top of
 the previous frames.
 
 
+### `Engine.background`
+
+By default this is empty, resulting in a browser defaulted white background.
+If you set it to a string color value, it will set the `document.body` element
+backgroundColor.
+
+
 ### `Engine.onRun`
 
 This is an optional method you can add to the Engine instance during setup that
