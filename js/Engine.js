@@ -86,7 +86,7 @@ Engine.prototype = {
 		return this;
 	},
 
-	killItem: function(item){
+	removeItem: function(item){
 		var indexOf = this._deffered.indexOf(item);
 		if (indexOf >= 0) {
 			return this;
