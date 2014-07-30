@@ -130,10 +130,10 @@ useful to read data from other items and thus it is made available.
 
 ### `Engine.addItem`
 
-This is used to add an Item to the engine.  Every Item you add MUST contain
-both an `.update` and a `.draw` method.  These methods are then fired every
-frame for every item added to the Engine.  To use it, simply pass your item
-instance as the first argument.
+This is used to add an Item instance to the engine.  Every instance you add
+MUST contain both an `.update` and a `.draw` method.  These methods are then
+fired every frame for every instance added to the Engine.  To use it, simply
+pass your item instance as the first argument.
 
 
 ### `Engine.removeItem`
