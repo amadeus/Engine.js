@@ -25,7 +25,8 @@ var App = {
 	instance: null,
 
 	engineSettings: {
-		background: '#000'
+		background: '#000',
+		clearColor: 'rgba(0,0,0,0.2)'
 	},
 
 	setup: function(){
