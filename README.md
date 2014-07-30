@@ -95,15 +95,15 @@ boolean that is `true` when the mouse button is pressed.
 
 ### `Engine.clearColor`
 
-There are three possible values for this that can incur 2 different scenarios.
-By default, `.clearColor` is `undefined`.  This is the default behavior and
-will force the `.clearRect` method to be called on the entire canvas every
-frame.  Generally speaking this is what you want.  Another option is to pass a
-string representing a color.  This can be RGBA, RGB, Hex, etc.  When a color is
-specified then `.fillRect` with the provided color will be used to 'clear' the
-canvas every frame instead of `.clearRect`.  And finally, if you set
-`.clearColor` to `null`, then it will bypass any clearing of the frame meaning
-every frame will be drawn on top of the previous frames.
+There are three possible values for this.  By default, `.clearColor` is
+`undefined`.  This is the default behavior and will force the `.clearRect`
+method to be called on the entire canvas every frame.  Generally speaking this
+is what you want.  Another option is to pass a string representing a color.
+This can be RGBA, RGB, Hex, etc.  When a color is specified then `.fillRect`
+with the provided color will be used to 'clear' the canvas every frame instead
+of `.clearRect`.  And finally, if you set `.clearColor` to `null`, then it will
+bypass any clearing of the frame meaning every frame will be drawn on top of
+the previous frames.
 
 
 ### `Engine.onRun`
