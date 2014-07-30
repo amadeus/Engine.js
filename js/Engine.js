@@ -58,7 +58,10 @@ Engine.prototype = {
 
 	setupMouse: function(){
 		this.mouse = Vector.coerce(this.mouse);
+		this.mouse.down = false;
 		this.canvas.addEventListener('mousemove', this._handleMouseMove.bind(this), false);
+		this.canvas.addEventListener('mousedown', this._handleMouseDown.bind(this), false);
+		this.canvas.addEventListener('mouseup',   this._handleMouseUp.bind(this),   false);
 	},
 
 	start: function(){
@@ -175,6 +178,14 @@ Engine.prototype = {
 
 		this.canvas.width  = this.width  * this.scale;
 		this.canvas.height = this.height * this.scale;
+	},
+
+	_handleMouseDown: function(){
+		this.mouse.down = true;
+	},
+
+	_handleMouseUp: function(){
+		this.mouse.down = false;
 	},
 
 	_handleMouseMove: function(event){
