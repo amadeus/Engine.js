@@ -24,7 +24,6 @@ var Engine = function(settings){
 	this.run = this.run.bind(this);
 
 	this.items     = [];
-	this.onPreRun  = [];
 	this._deffered = [];
 };
 
@@ -96,7 +95,7 @@ Engine.prototype = {
 	},
 
 	run: function(){
-		var i, items, deffered, preRun, scale, context, tick, _now, indexOf;
+		var i, items, deffered, scale, context, tick, _now, indexOf;
 
 		if (this.paused) {
 			return this;
@@ -104,7 +103,6 @@ Engine.prototype = {
 
 		items    = this.items;
 		deffered = this._deffered;
-		preRun   = this.onPreRun;
 		scale    = this.scale;
 		context  = this.context;
 
