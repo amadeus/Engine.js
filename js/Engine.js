@@ -81,20 +81,6 @@ Engine.prototype = {
 		return this;
 	},
 
-	addPreRun: function(func){
-		this.onPreRun.push(func);
-		return this;
-	},
-
-	removePreRun: function(func){
-		var indexOf = this.onPreRun.indexOf(func);
-		if (indexOf < 0) {
-			return this;
-		}
-		this.onPreRun.splice(indexOf, 1);
-		return this;
-	},
-
 	killItem: function(item){
 		var indexOf = this._deffered.indexOf(item);
 		if (indexOf >= 0) {
@@ -137,10 +123,6 @@ Engine.prototype = {
 			);
 		}
 
-		for (i = 0; i < preRun.length; i++) {
-			preRun[i](tick, items, this);
-		}
-
 		// Update cycle
 		for (i = 0; i < items.length; i++) {
 			items[i].update(tick, items, this);
@@ -162,6 +144,10 @@ Engine.prototype = {
 			}
 
 			deffered.length = 0;
+		}
+
+		if (this.onRun) {
+			this.onRun(tick, items, this);
 		}
 
 		this.last = _now;

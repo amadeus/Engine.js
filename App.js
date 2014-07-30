@@ -25,8 +25,8 @@ var App = {
 		// Required... to run the engine
 		this.engine = new Engine(this.engineSettings);
 
-		// Every frame add one test item until we hit 1000
-		this.engine.addPreRun(function(tick, items, engine){
+		// Every frame add one item until we hit 1000
+		this.engine.onRun = function(tick, items, engine){
 			if (items.length < 1000) {
 				engine.addItem(new Item({
 					color: 'rgba(' +
@@ -43,7 +43,7 @@ var App = {
 					}
 				}));
 			}
-		});
+		};
 
 		return this;
 	},
