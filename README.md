@@ -14,7 +14,7 @@ in depth details into the structure, just keep on reading.
 
 ## RequireJS
 
-The entire module system does depend on [RequreJS](http://requirejs.org) which
+The entire module system does depend on [RequireJS](http://requirejs.org) which
 you should be at least somewhat familiar with before continuing.  RequireJS
 provides the basic module system so that when you work, you never need to edit
 the html file or worry about any sort of dependency order.  It also gives you
