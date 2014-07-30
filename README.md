@@ -213,7 +213,7 @@ A reference to the context from `Engine.canvas`.
 
 ## js/Item.js
 
-This file was provided purely for example.  It exhibits a classic Vector API
+This file was provided purely for example.  It exhibits classic Vector math
 for moving around on the canvas.  Note the required `.update` and `.draw`
 methods on the prototype.  Also notice how it utilizes the `scale` argument in
 draw to accommodate for retina displays.
