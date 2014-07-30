@@ -170,7 +170,7 @@ Engine.prototype = {
 			this.canvas.style.left = '50%';
 			this.canvas.style.margin = '-' +
 				(this.height / 2) + 'px 0 0 -' +
-				(this.width / 2)  + 'px';
+				(this.width  / 2) + 'px';
 		}
 
 		this.canvas.width  = this.width  * this.scale;
