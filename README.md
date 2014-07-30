@@ -201,6 +201,16 @@ set automatically and enables you to gracefully support retina resolution
 visuals.
 
 
+### `Engine.canvas`
+
+A reference to the canvas element the scene is drawn to.
+
+
+### `Engine.context`
+
+A reference to the context from `Engine.canvas`.
+
+
 ## js/Item.js
 
 This file was provided purely for example.  It exhibits a classic Vector API
