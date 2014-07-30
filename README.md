@@ -216,7 +216,7 @@ A reference to the context from `Engine.canvas`.
 This file was provided purely for example.  It exhibits classic Vector math
 for moving around on the canvas.  Note the required `.update` and `.draw`
 methods on the prototype.  Also notice how it utilizes the `scale` argument in
-draw to accommodate for retina displays.
+`.draw` to accommodate for retina displays.
 
 The recommended use case for this project is to make copies of the Item.js
 file, manipulate as you see fit.  Then add them as requirements for your App.js
