@@ -9,6 +9,8 @@ To get started, simply open up `index.html` in your favorite browser (that
 supports the canvas tag) and pop into `App.js` to see how it works.  For more
 in depth details into the structure, just keep on reading.
 
+![Example Screenshot](https://dl.dropboxusercontent.com/u/18782/engine-js-screenshot.png)
+
 
 ## RequireJS
 
