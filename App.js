@@ -1,5 +1,12 @@
 require.config({
-	baseUrl: 'js/'
+	baseUrl: 'js/',
+
+	shim: {
+		// Add your shims here for libraries you
+		// want to include that are not RequireJS
+		// compatible. More details here:
+		// http://requirejs.org/docs/api.html#config-shim
+	}
 });
 
 require([
