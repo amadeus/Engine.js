@@ -124,7 +124,8 @@ implementation in `App.js`.
 
 `.items` is an array of all items added to the engine instance.  Generally
 speaking you should never manipulate the items directly, instead you should use
-the `.additem` and `.removeItem` methods below.
+the `.additem` and `.removeItem` methods below.  It is however, often very
+useful to read data from other items and thus it is made available.
 
 
 ### `Engine.addItem`
