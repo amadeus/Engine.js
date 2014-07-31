@@ -153,7 +153,10 @@ You will probably never need to touch this method, but it will be fired
 approximately 60 times a second, and it performs a variety of important tasks
 that are absolutely important to know and understand.
 
-First, `.run` determines a new `tick` value based on the time since last frame.
+First, `.run` determines a new `.tick` value based on the time since last
+frame. This will be the time since the last frame in seconds, as a float.  In
+other words, pretty small, ideally around 0.16666.  The value of tick should be
+used by the various Item instances to determine distances travelled, etc.
 
 Next, the canvas is cleared, based on the `.clearColor` value, or lack thereof.
 
